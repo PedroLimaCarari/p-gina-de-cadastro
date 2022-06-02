@@ -1,0 +1,10 @@
+function validarSenha(senha){
+    var senha = document.getElementById("senha").value;
+    var senha2 = document.getElementById("senha2").value;
+    if(senha != senha2){
+        alert("Senhas não conferem");
+        return false;
+    }
+    return true;
+}
+
