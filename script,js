@@ -1,10 +1,26 @@
-function validarSenha(senha){
-    var senha = document.getElementById("senha").value;
-    var senha2 = document.getElementById("senha2").value;
-    if(senha != senha2){
-        alert("Senhas não conferem");
-        return false;
-    }
-    return true;
+init()
+
+function init() {
+  document.getElementById("nome").addEventListener("keyup", save)
+}
+function save() {
+  var nome = document.getElementById("nome").value
+  localStorage.setItem("user", nome)
+
+  var email = document.getElementById("email").value
+  localStorage.setItem("email", email)
+
+  var senha = document.getElementById("senha").value
+  localStorage.setItem("senha", senha)
+
+  var telefone = document.getElementById("telefone").value
+  localStorage.setItem("telefone", telefone)
 }
 
+function clean() {
+  localStorage.clear()
+  document.getElementById("email").value = ""
+  document.getElementById("nome").value = ""
+  document.getElementById("senha").value = ""
+  document.getElementById("telefone").value = ""
+}
