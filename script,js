@@ -1,8 +1,4 @@
 init()
-
-function init() {
-  document.getElementById("nome").addEventListener("keyup", save)
-}
 function save() {
   var nome = document.getElementById("nome").value
   localStorage.setItem("user", nome)
@@ -18,9 +14,9 @@ function save() {
 }
 
 function clean() {
-  localStorage.clear()
   document.getElementById("email").value = ""
   document.getElementById("nome").value = ""
   document.getElementById("senha").value = ""
   document.getElementById("telefone").value = ""
 }
+
