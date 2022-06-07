@@ -1,4 +1,3 @@
-init()
 function save() {
   var nome = document.getElementById("nome").value
   localStorage.setItem("user", nome)
